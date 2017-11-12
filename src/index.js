@@ -10,7 +10,6 @@ app.get('/', (req: $Request, res: $Response) => {
   res.send('Hello World!');
 });
 
-app.listen(
-  process.argv[2],
-  () => console.log(`streams listening on ${process.argv[2]}`)
+app.listen(process.argv[2], () =>
+  console.log(`streams listening on ${process.argv[2]}`)
 );
