@@ -1,0 +1,26 @@
+{
+  "name": "streams",
+  "version": "1.0.0",
+  "description": "Socket with Redis to work with streams",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src/ --out-dir dist/ ",
+    "start": "concurrently \"npm run build -- --watch\" \"nodemon dist/index.js 3000\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "flow": "flow-bin"
+  },
+  "author": "Abdul Khan <invalidred@gmail.com> (http://github.com/invalidred)",
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.16.2"
+  },
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-preset-env": "1.6.1",
+    "babel-preset-flow": "6.23.0",
+    "concurrently": "3.5.0",
+    "flow-bin": "0.59.0",
+    "nodemon": "1.12.1",
+    "rimraf": "2.6.2"
+  }
+}
