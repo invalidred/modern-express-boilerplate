@@ -7,7 +7,8 @@
     "build": "babel src/ --out-dir dist/ ",
     "start": "concurrently \"npm run build -- --watch\" \"nodemon dist/index.js 3000\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "flow": "flow-bin"
+    "flow": "flow",
+    "lint": "eslint src/"
   },
   "author": "Abdul Khan <invalidred@gmail.com> (http://github.com/invalidred)",
   "license": "MIT",
@@ -16,9 +17,13 @@
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
+    "babel-eslint": "8.0.2",
     "babel-preset-env": "1.6.1",
     "babel-preset-flow": "6.23.0",
     "concurrently": "3.5.0",
+    "eslint": "4.11.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
     "flow-bin": "0.59.0",
     "nodemon": "1.12.1",
     "rimraf": "2.6.2"

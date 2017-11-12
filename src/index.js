@@ -1,13 +1,12 @@
 // @flow
 
 import express from 'express';
-import type { $Application, $Request, $Response } from 'express';
+import type { $Request, $Response } from 'express';
 
 const app = express();
 
 app.use(express.static(`${__dirname}/../public`));
 app.get('/', (req: $Request, res: $Response) => {
-  debugger;
   res.send('Hello World!');
 });
 
