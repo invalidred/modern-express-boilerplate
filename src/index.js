@@ -6,6 +6,7 @@ import type { $Request, $Response } from 'express';
 const app = express();
 
 app.use(express.static(`${__dirname}/../public`));
+
 app.get('/', (req: $Request, res: $Response) => {
   res.send('Hello World!');
 });

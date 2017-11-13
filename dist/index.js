@@ -9,8 +9,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 const app = (0, _express2.default)();
 
 app.use(_express2.default.static(`${__dirname}/../public`));
+
 app.get('/', (req, res) => {
-  debugger;
   res.send('Hello World!');
 });
 

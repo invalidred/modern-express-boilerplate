@@ -6,9 +6,10 @@
   "scripts": {
     "build": "babel src/ --out-dir dist/ ",
     "start": "concurrently \"npm run build -- --watch\" \"nodemon dist/index.js 3000\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "flow": "flow",
-    "lint": "eslint src/"
+    "lint": "eslint src/",
+    "test": "jest",
+    "test:watch": "npm run test -- --watch"
   },
   "author": "Abdul Khan <invalidred@gmail.com> (http://github.com/invalidred)",
   "license": "MIT",
@@ -22,11 +23,13 @@
     "babel-preset-flow": "6.23.0",
     "concurrently": "3.5.0",
     "eslint": "4.11.0",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-config-prettier": "^2.7.0",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-prettier": "^2.3.1",
+    "eslint-config-airbnb-base": "12.1.0",
+    "eslint-config-prettier": "2.7.0",
+    "eslint-plugin-import": "2.8.0",
+    "eslint-plugin-jest": "21.3.2",
+    "eslint-plugin-prettier": "2.3.1",
     "flow-bin": "0.59.0",
+    "jest": "21.2.1",
     "nodemon": "1.12.1",
     "prettier": "1.8.2",
     "rimraf": "2.6.2"
